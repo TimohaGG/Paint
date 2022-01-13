@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    padding:0;
+}
+
+.paint-field,
+.controls{
+    width: 850px;
+    margin: 0 auto;
+}
+
+.column1{
+display: flex;
+justify-content: center;
+}
+
+.pixel{
+    width:15px;
+    height: 15px;
+    background-color: aliceblue;
+    border: 1px solid black;
+
+}
+
+.controls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:20px;
+    background-color: rgb(194, 226, 255);
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+.choose-color {
+    text-align: center;
+    display: flex;
+    padding: 8px 35px 8px 12px;
+    font: inherit;
+    color: inherit;
+    border: 2px solid #20262d;
+    border-radius: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 8px top 50%;
+    background-size: 14px auto;
+    background-color: #485671;
+    background-image: url("img/down.png");
+    color:lavender;
+  }
+
+  .clear-button{
+      background-color: #485671;
+      color:lavender;
+      border: 2px solid #20262d;
+      padding: 8px 12px 8px 12px;
+  }
+
+  .eraser{
+      display: none;
+  }
+  .eraser-label {
+    position: relative;
+    padding: 8px 0 8px 40px;
+    cursor: pointer;
+  }
+  
+  .eraser-label::before {
+    position: absolute;
+    content: "";
+    left: 6px;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #20262d;
+  }
+  
+  .eraser:checked + .eraser-label::before {
+    background-color: #20262d;
+    background-image: url("img/check.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .eraser:focus + .eraser-label::before {
+    outline: 2px dashed #6e86b3;
+    outline-offset: 2px;
+  }
+  
+  .eraser-label:hover::before {
+    background-color: #304153;
+  }
+  
+  .eraser-label:active::before {
+    background-color: #20262d;
+    border-color: #485671;
+  }
+  
+  .eraser-label::after {
+    position: absolute;
+    content: "";
+    left: 6px;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+    background: url("img/cut-corners.svg");
+    background-repeat: no-repeat;
+  }
+  
